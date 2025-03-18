@@ -1,6 +1,5 @@
 # SISTEM OPERASI
-## Minggu ke-3 : Selasa, 11 Maret 2025
-
+## Minggu ke-4 : Selasa, 11 Maret 2025
  
 # Oleh :
 ## Mey Risa Handayani
@@ -10,7 +9,6 @@
 # Dosen Pengampu :
 ## Dr Ferry Astika Saputra ST, M.Sc
 ## NIP : 197708232001121002
-
 
 # POLITEKNIK ELEKTRONIKA NEGERI SURABAYA
 # PSDKU LAMONGAN
