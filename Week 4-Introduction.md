@@ -1,4 +1,20 @@
+# SISTEM OPERASI
+## Minggu ke-3 : Selasa, 11 Maret 2025
 
+ 
+# Oleh :
+## Mey Risa Handayani
+## D3 Teknik Informatika (A) PENS LA
+## NRP 3124521011
+
+# Dosen Pengampu :
+## Dr Ferry Astika Saputra ST, M.Sc
+## NIP : 197708232001121002
+
+
+# POLITEKNIK ELEKTRONIKA NEGERI SURABAYA
+# PSDKU LAMONGAN
+# TAHUN 2025
 
 1. Apa yang Dilakukan Sistem Operasi?
 Sistem Operasi berperan sebagai pengelola sumber daya (resource allocator) dan program kontrol yang mengatur penggunaan hardware secara efisien.
