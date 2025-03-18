@@ -1,3 +1,19 @@
+# SISTEM OPERASI
+## Minggu ke-5 : Selasa, 18 Maret 2025
+ 
+# Oleh :
+## Mey Risa Handayani
+## D3 Teknik Informatika (A) PENS LA
+## NRP 3124521011
+
+# Dosen Pengampu :
+## Dr Ferry Astika Saputra ST, M.Sc
+## NIP : 197708232001121002
+
+# POLITEKNIK ELEKTRONIKA NEGERI SURABAYA
+# PSDKU LAMONGAN
+# TAHUN 2025
+
 1. Migrasi Fitur Sistem Operasi
 •	Fitur yang awalnya hanya ada di sistem besar (seperti mainframe) akhirnya diadopsi oleh sistem yang lebih kecil (seperti mikrokomputer dan perangkat genggam).
 •	Contoh: MULTICS, sistem operasi yang dikembangkan pada 1960-an, memperkenalkan konsep seperti proteksi memori dan sistem file hierarkis yang kemudian diadopsi oleh sistem modern seperti UNIX.
