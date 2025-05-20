@@ -15,6 +15,46 @@
 # TAHUN 2025
 # Tugas Soal 5.17-5.18 S10-Chapter-05
 
+## SOAL
+5.17 Diberikan set proses berikut, dengan panjang CPU burst dalam milidetik:
+
+Proses	Waktu Burst	Prioritas
+P1	5	4
+P2	3	1
+P3	1	2
+P4	7	2
+P5	4	3
+
+Proses-proses tersebut diasumsikan tiba dalam urutan P1, P2, P3, P4, P5, pada waktu 0.
+
+a. Gambar empat Gantt chart yang menggambarkan pelaksanaan proses-proses ini menggunakan algoritma penjadwalan berikut: FCFS, SJF, prioritas non-preemptive (angka prioritas yang lebih besar menunjukkan prioritas yang lebih tinggi), dan RR (quantum = 2).
+
+b. Berapakah waktu turnaround untuk setiap proses pada masing-masing algoritma penjadwalan di bagian a?
+
+c. Berapakah waktu tunggu untuk setiap proses pada masing-masing algoritma penjadwalan di bagian a?
+
+d. Algoritma mana yang menghasilkan waktu tunggu rata-rata terendah (untuk semua proses)?
+
+5.18 Proses-proses berikut sedang dijadwalkan menggunakan algoritma penjadwalan prioritas preemptive berbasis round-robin.
+
+Proses	Prioritas	Waktu Burst	Kedatangan
+P1	8	15	0
+P2	3	20	0
+P3	4	20	20
+P4	4	20	25
+P5	5	5	45
+P6	5	15	55
+
+Setiap proses diberikan prioritas numerik, dengan angka yang lebih tinggi menunjukkan prioritas yang lebih tinggi. Penjadwal akan mengeksekusi proses dengan prioritas tertinggi. Untuk proses dengan prioritas yang sama, penjadwal round-robin dengan quantum waktu 10 unit akan digunakan. Jika sebuah proses diganggu oleh proses dengan prioritas lebih tinggi, proses yang diganggu akan dilanjutkan setelah proses dengan prioritas lebih tinggi selesai.
+
+a. Gambarkan urutan proses menggunakan Gantt chart.
+
+b. Berapakah waktu turnaround untuk setiap proses?
+
+c. Berapakah waktu tunggu untuk setiap proses?
+
+
+## JAWABAN
 5.17
 a. Gantt Chart untuk empat algoritma penjadwalan:
     1.	FCFS (First Come, First Serve):
@@ -97,9 +137,69 @@ d. Algoritma yang Menghasilkan Waktu Tunggu Rata-rata Terendah:
 Dari hasil perhitungan waktu tunggu, SJF menghasilkan waktu tunggu rata-rata terendah.
 
 5.18
-a. Gantt Chart:
-•	Menggunakan algoritma round-robin (quantum = 10).
-•	Proses dijalankan secara bergilir sesuai dengan waktu arrival dan prioritasnya.
-b. Deskripsi Proses:
-•	P1 akan dieksekusi terlebih dahulu karena prioritasnya lebih tinggi dibandingkan proses lainnya (prioritas 8).
-•	Jika proses lebih rendah prioritasnya, proses tersebut akan digilir berdasarkan time quantum yang telah ditentukan (10 unit waktu).
+a. Gambarkan urutan proses menggunakan Gantt chart
+   Pada round-robin dengan prioritas preemptive (quantum = 10), proses akan dieksekusi bergilir berdasarkan prioritas. Proses dengan prioritas lebih tinggi akan dieksekusi lebih dulu, dan jika ada proses dengan prioritas yang sama, sistem akan bergiliran menjalankannya.
+   
+   Urutan proses berdasarkan prioritas tertinggi:
+   
+   o P1 (Prioritas 8) akan dieksekusi terlebih dahulu, karena memiliki prioritas tertinggi.
+   
+   o Setelah P1 selesai atau di-preempt oleh proses dengan prioritas lebih tinggi, proses berikutnya adalah P5 dan P6 (prioritas 5).
+   
+   o Proses P3 dan P4 memiliki prioritas yang lebih rendah, tetapi mereka akan mulai berjalan setelah P2 (prioritas 3) selesai.
+   
+   Berikut adalah Gantt chart dengan quantum waktu 10 untuk proses:
+   | P1 | P2 | P1 | P5 | P1 | P3 | P4 | P5 | P6 |
+   0    10   20   30   40   50   60   70   80
+
+b. Waktu Turnaround
+   Waktu turnaround adalah waktu total yang diperlukan dari saat proses mulai hingga selesai. Perhitungannya adalah:
+   Turnaround Time = Waktu Selesai - Waktu Kedatangan
+   
+   Berikut adalah perhitungan waktu turnaround untuk setiap proses:
+   
+   o P1: Waktu selesai = 50, Waktu kedatangan = 0 → Turnaround = 50 - 0 = 50
+   
+   o P2: Waktu selesai = 30, Waktu kedatangan = 0 → Turnaround = 30 - 0 = 30
+   
+   o P3: Waktu selesai = 60, Waktu kedatangan = 20 → Turnaround = 60 - 20 = 40
+   
+   o P4: Waktu selesai = 70, Waktu kedatangan = 25 → Turnaround = 70 - 25 = 45
+   
+   o P5: Waktu selesai = 75, Waktu kedatangan = 45 → Turnaround = 75 - 45 = 30
+   
+   o P6: Waktu selesai = 85, Waktu kedatangan = 55 → Turnaround = 85 - 55 = 30
+
+c. Waktu Tunggu
+   Waktu tunggu adalah waktu total yang dihabiskan oleh proses dalam antrian sebelum dieksekusi. Perhitungannya adalah:
+   Waiting Time = Turnaround Time - Burst Time
+   
+   Berikut adalah perhitungan waktu tunggu untuk setiap proses:
+   
+   o P1: Turnaround = 50, Burst Time = 15 → Waiting Time = 50 - 15 = 35
+   
+   o P2: Turnaround = 30, Burst Time = 20 → Waiting Time = 30 - 20 = 10
+   
+   o P3: Turnaround = 40, Burst Time = 20 → Waiting Time = 40 - 20 = 20
+   
+   o P4: Turnaround = 45, Burst Time = 20 → Waiting Time = 45 - 20 = 25
+   
+   o P5: Turnaround = 30, Burst Time = 5 → Waiting Time = 30 - 5 = 25
+   
+   o P6: Turnaround = 30, Burst Time = 15 → Waiting Time = 30 - 15 = 15
+   
+d. Algoritma Mana yang Menghasilkan Waktu Tunggu Rata-rata Terendah
+   Untuk menghitung rata-rata waktu tunggu, kita jumlahkan semua waktu tunggu dan bagi dengan jumlah proses:
+   Average Waiting Time = (35 + 10 + 20 + 25 + 25 + 15) / 6 = 130 / 6 ≈ 21.67
+   
+   Jadi, algoritma round-robin berbasis prioritas preemptive ini menghasilkan waktu tunggu rata-rata sekitar 21.67.
+
+
+## Kesimpulan:
+Gantt Chart memberikan gambaran visual urutan eksekusi proses.
+
+Waktu Turnaround dihitung berdasarkan selisih antara waktu selesai dan waktu kedatangan.
+
+Waktu Tunggu dihitung berdasarkan selisih antara waktu turnaround dan waktu burst.
+
+Rata-rata Waktu Tunggu memberikan gambaran efektivitas algoritma.
