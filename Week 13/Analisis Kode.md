@@ -251,4 +251,17 @@ printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 7. Kesimpulan
 Kode ini mengimplementasikan algoritma Shortest Remaining Time First (SRTF) yang preemptive, yang memilih proses dengan waktu eksekusi tersisa paling pendek pada setiap unit waktu dan mengeksekusinya. Algoritma ini sering digunakan untuk sistem yang harus melakukan penjadwalan proses dengan mempertimbangkan perubahan dalam waktu eksekusi secara dinamis. Program ini mencetak informasi tentang setiap proses, serta menghitung rata-rata waktu turnaround dan waiting time.
 Namun, ada beberapa aspek yang bisa diperbaiki, seperti validasi input dan perhitungan response time.
- 
+
+| **Process** | *Arrival Time* | **Burst Time** |
+| ----------- | -------------- | -------------- |
+| P₁          | 0              | 8              |
+| P₂          | 1              | 4              |
+| P₃          | 2              | 9              |
+| P₄          | 3              | 5              |
+
+Preemptive SJF Gantt Chart
+|  P₁  |  P₂  |   P₄   |   P₁   |   P₃   |
+0      1      5       10       17       26
+
+Average waiting time = [(10 - 1) + (1 - 1) + (17 - 2) + (5 - 3)] / 4
+= (9 + 0 + 15 + 2) / 4 = 26 / 4 = 6.5 msec
