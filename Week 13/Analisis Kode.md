@@ -172,7 +172,21 @@ printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 8. Kesimpulan
 Kode ini memberikan implementasi algoritma Shortest Job First (SJF) dengan arrival time yang mempertimbangkan kedatangan proses dan memilih proses dengan burst time terkecil untuk dieksekusi terlebih dahulu. Ini adalah implementasi sederhana dan efektif untuk memahami dasar-dasar SJF, meskipun ada beberapa aspek yang bisa ditingkatkan, seperti mempertimbangkan preemption atau menangani kondisi dengan arrival time yang sama secara lebih efisien.
 
- 
+Berdasarkan output kode di folder sebelah :
+| Process | Arrival Time (AT) | Burst Time (BT) |
+| ------- | ----------------- | --------------- |
+| P1      | 0                 | 8               |
+| P2      | 1                 | 4               |
+| P3      | 2                 | 9               |
+| P4      | 3                 | 5               |
+
+Gantt Chart
+|  P₁  |  P₂  |  P₄  |  P₃  |
+|  0   |  8   | 12   | 17   | 26
+
+Average Turnaround Time = (8 + 11 + 14 + 24) / 4 = 14.25
+Average Waiting Time = (0 + 7 + 9 + 15) / 4 = 7.75
+ 
 ## Analisis Kode: SRTF Scheduling Algorithm (Preemptive)
 Kode ini mengimplementasikan algoritma Shortest Remaining Time First (SRTF) yang merupakan varian dari Shortest Job First (SJF) yang preemptive. Pada algoritma ini, proses yang memiliki waktu tersisa (remaining time) paling pendek akan dieksekusi terlebih dahulu, dan proses bisa di-preempt jika ada proses lain dengan waktu tersisa yang lebih kecil. Berikut adalah analisis mendalam dari setiap bagian kode:
 1. Struktur Data
@@ -252,6 +266,8 @@ printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 Kode ini mengimplementasikan algoritma Shortest Remaining Time First (SRTF) yang preemptive, yang memilih proses dengan waktu eksekusi tersisa paling pendek pada setiap unit waktu dan mengeksekusinya. Algoritma ini sering digunakan untuk sistem yang harus melakukan penjadwalan proses dengan mempertimbangkan perubahan dalam waktu eksekusi secara dinamis. Program ini mencetak informasi tentang setiap proses, serta menghitung rata-rata waktu turnaround dan waiting time.
 Namun, ada beberapa aspek yang bisa diperbaiki, seperti validasi input dan perhitungan response time.
 
+
+Berdasarkan output kode pada folder sebelah :
 | **Process** | *Arrival Time* | **Burst Time** |
 | ----------- | -------------- | -------------- |
 | P₁          | 0              | 8              |
