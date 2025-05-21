@@ -65,6 +65,7 @@ Kode ini mengimplementasikan algoritma Shortest Job First (SJF) tanpa mempertimb
 
 ## Analisis Kode: SJF Scheduling Algorithm (Non-Preemptive)
 Kode ini mengimplementasikan algoritma Shortest Job First (SJF) dengan memperhitungkan Arrival Time (AT) untuk non-preemptive scheduling, di mana proses yang memiliki waktu burst lebih pendek akan dieksekusi terlebih dahulu. Berikut adalah analisis mendalam dari setiap bagian kode:
+
 1. Struktur Data
 struct proc {
     int no, at, bt, it, ct, tat, wt;
@@ -77,6 +78,7 @@ struct proc {
 •	ct: Completion time (waktu selesai eksekusi).
 •	tat: Turnaround time (waktu dari kedatangan hingga selesai, CT - AT).
 •	wt: Waiting time (waktu tunggu sebelum proses dimulai, TAT - BT).
+
 2. Fungsi read()
 Fungsi read() digunakan untuk membaca input dari pengguna. Di sini, pengguna diminta untuk memasukkan Arrival Time (AT) dan Burst Time (BT) untuk setiap proses yang akan dihitung oleh algoritma.
 struct proc read(int i) {
@@ -91,6 +93,7 @@ struct proc read(int i) {
 }
 •	at: Waktu kedatangan proses.
 •	bt: Waktu burst (waktu yang diperlukan untuk menjalankan proses).
+
 3. Input dan Pengurutan Berdasarkan Arrival Time
 Setelah mendapatkan input jumlah proses, kode ini akan mengurutkan proses berdasarkan Arrival Time (AT). Proses dengan arrival time lebih awal akan diproses terlebih dahulu.
 for (int i = 0; i < n - 1; i++)
@@ -101,6 +104,7 @@ for (int i = 0; i < n - 1; i++)
             p[j + 1] = temp;
         }
 •	Kode ini menggunakan algoritma Bubble Sort untuk mengurutkan proses berdasarkan arrival time.
+
 4. Penentuan Proses Pertama
 Setelah pengurutan berdasarkan arrival time, kode mencari proses dengan burst time paling kecil di antara proses yang tiba pada waktu yang sama (arrival time yang sama).
 for (j = 1; j < n && p[j].at == p[0].at; j++)
