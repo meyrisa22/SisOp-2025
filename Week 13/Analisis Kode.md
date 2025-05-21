@@ -61,7 +61,21 @@ printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 •	Tidak Memverifikasi Input: Program tidak memeriksa apakah nilai input valid atau tidak (misalnya, jika nilai burst time adalah angka negatif, program tetap akan berjalan tanpa peringatan).
 7. Kesimpulan
 Kode ini mengimplementasikan algoritma Shortest Job First (SJF) tanpa mempertimbangkan arrival time, yang berarti semua proses dianggap tiba pada waktu yang sama. Algoritma ini mengurutkan proses berdasarkan burst time dan menghitung waktu-waktu yang relevan (completion time, turnaround time, dan waiting time). Program ini memberikan gambaran yang baik tentang cara kerja SJF, meskipun ada beberapa kekurangan yang dapat diperbaiki, seperti perhitungan Response Time dan validasi input.
-  
+
+Berdasarkan output pada folder sebelah :
+
+Process | Burst Time
+P₁ | 6
+P₂ | 8
+P₃ | 7
+P₄ | 3
+
+SJF scheduling chart:
+|  P₄  |   P₁   |   P₃   |   P₂   |
+0      3        9       16        24
+
+Average waiting time = (3 + 16 + 9 + 0) / 4 = 7
+
 
 ## Analisis Kode: SJF Scheduling Algorithm (Non-Preemptive)
 Kode ini mengimplementasikan algoritma Shortest Job First (SJF) dengan memperhitungkan Arrival Time (AT) untuk non-preemptive scheduling, di mana proses yang memiliki waktu burst lebih pendek akan dieksekusi terlebih dahulu. Berikut adalah analisis mendalam dari setiap bagian kode:
