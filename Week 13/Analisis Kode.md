@@ -110,6 +110,7 @@ temp = p[0];
 p[0] = p[min];
 p[min] = temp;
 •	Proses dengan burst time terkecil di antara proses yang tiba pertama kali akan dipilih untuk dieksekusi pertama.
+
 5. Perhitungan Completion Time, Turnaround Time, dan Waiting Time
 Pada bagian ini, kode menghitung Completion Time (CT), Turnaround Time (TAT), dan Waiting Time (WT) untuk setiap proses:
 •	Completion Time (CT): Waktu selesai eksekusi proses, dihitung dari waktu mulai eksekusi ditambah dengan burst time.
@@ -132,6 +133,7 @@ for (int i = 1; i < n; i++) {
 }
 •	Proses 1 akan memulai eksekusi berdasarkan arrival time-nya.
 •	Proses berikutnya akan dimulai setelah proses sebelumnya selesai, dengan mempertimbangkan burst time terkecil di antara proses yang sudah tiba.
+
 6. Output Hasil
 Setelah perhitungan selesai, program akan menampilkan informasi untuk setiap proses seperti nomor proses, arrival time, burst time, completion time, turnaround time, waiting time, dan response time. Selain itu, program juga menghitung dan menampilkan rata-rata Turnaround Time dan rata-rata Waiting Time.
 for (int i = 0; i < n; i++) {
@@ -145,6 +147,7 @@ avgtat /= n, avgwt /= n;
 printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 •	Average TurnAroundTime: Rata-rata waktu yang dibutuhkan untuk setiap proses dari kedatangan hingga selesai.
 •	Average WaitingTime: Rata-rata waktu yang dihabiskan oleh proses dalam antrian sebelum dieksekusi.
+
 7. Potensi Masalah atau Kekurangan
 •	Tidak Mempertimbangkan Preemption: Algoritma ini menggunakan pendekatan non-preemptive, yang berarti proses yang sedang berjalan tidak dapat dihentikan hingga selesai.
 •	Masalah Jika Ada Proses Dengan Arrival Time Sama: Jika lebih dari satu proses memiliki arrival time yang sama, algoritma ini memilih berdasarkan burst time terpendek. Ini mungkin tidak ideal jika terdapat banyak proses dengan arrival time yang sama.
