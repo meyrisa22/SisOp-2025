@@ -64,17 +64,31 @@ Kode ini mengimplementasikan algoritma Shortest Job First (SJF) tanpa mempertimb
 
 Berdasarkan output pada folder sebelah :
 
-Process | Burst Time
-P₁ | 6
-P₂ | 8
-P₃ | 7
-P₄ | 3
+Detail Perhitungan Waktu :
+| Process | BT | CT | TAT = CT | WT = TAT - BT |
+| ------- | -- | -- | -------- | ------------- |
+| P4      | 3  | 3  | 3        | 0             |
+| P1      | 6  | 9  | 9        | 3             |
+| P3      | 7  | 16 | 16       | 9             |
+| P2      | 8  | 24 | 24       | 16            |
 
-SJF scheduling chart:
+Tabel Proses :
+| Process | Burst Time (BT) |
+| ------- | --------------- |
+| P1      | 6               |
+| P2      | 8               |
+| P3      | 7               |
+| P4      | 3               |
+
+Gantt chart :
 |  P₄  |   P₁   |   P₃   |   P₂   |
 0      3        9       16        24
 
+Average Turnaround Time (TAT) = 13.0
 Average waiting time = (3 + 16 + 9 + 0) / 4 = 7
+Catatan: Karena arrival time tidak digunakan, maka Turnaround Time = Completion Time.
+
+
 
 
 ## Analisis Kode: SJF Scheduling Algorithm (Non-Preemptive)
@@ -172,7 +186,19 @@ printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f", avgtat, avgwt);
 8. Kesimpulan
 Kode ini memberikan implementasi algoritma Shortest Job First (SJF) dengan arrival time yang mempertimbangkan kedatangan proses dan memilih proses dengan burst time terkecil untuk dieksekusi terlebih dahulu. Ini adalah implementasi sederhana dan efektif untuk memahami dasar-dasar SJF, meskipun ada beberapa aspek yang bisa ditingkatkan, seperti mempertimbangkan preemption atau menangani kondisi dengan arrival time yang sama secara lebih efisien.
 
+
+
 Berdasarkan output kode di folder sebelah :
+
+Detail Perhitungan Waktu :
+| Process | Arrival Time (AT) | Burst Time (BT) | Completion Time (CT) | Turnaround Time (TAT = CT - AT) | Waiting Time (WT = TAT - BT) |
+| ------- | ----------------- | --------------- | -------------------- | ------------------------------- | ---------------------------- |
+| P₁      | 0                 | 8               | 8                    | 8                               | 0                            |
+| P₂      | 1                 | 4               | 12                   | 11                              | 7                            |
+| P₄      | 3                 | 5               | 17                   | 14                              | 9                            |
+| P₃      | 2                 | 9               | 26                   | 24                              | 15                           |
+
+Tabel Proses :
 | Process | Arrival Time (AT) | Burst Time (BT) |
 | ------- | ----------------- | --------------- |
 | P1      | 0                 | 8               |
@@ -180,7 +206,7 @@ Berdasarkan output kode di folder sebelah :
 | P3      | 2                 | 9               |
 | P4      | 3                 | 5               |
 
-Gantt Chart
+Gantt Chart :
 |  P₁  |  P₂  |  P₄  |  P₃  |
 |  0   |  8   | 12   | 17   | 26
 
@@ -268,6 +294,16 @@ Namun, ada beberapa aspek yang bisa diperbaiki, seperti validasi input dan perhi
 
 
 Berdasarkan output kode pada folder sebelah :
+
+Detail Perhitungan Waktu :
+| Process | AT | BT | CT | TAT = CT - AT | WT = TAT - BT |
+| ------- | -- | -- | -- | ------------- | ------------- |
+| P2      | 1  | 4  | 5  | 4             | 0             |
+| P4      | 3  | 5  | 10 | 7             | 2             |
+| P1      | 0  | 8  | 17 | 17            | 9             |
+| P3      | 2  | 9  | 26 | 24            | 15            |
+
+Tabel Proses :
 | **Process** | *Arrival Time* | **Burst Time** |
 | ----------- | -------------- | -------------- |
 | P₁          | 0              | 8              |
@@ -275,9 +311,11 @@ Berdasarkan output kode pada folder sebelah :
 | P₃          | 2              | 9              |
 | P₄          | 3              | 5              |
 
-Preemptive SJF Gantt Chart
+Gantt Chart:
 |  P₁  |  P₂  |   P₄   |   P₁   |   P₃   |
 0      1      5       10       17       26
 
+Average Turnaround Time (TAT) = 13.0
 Average waiting time = [(10 - 1) + (1 - 1) + (17 - 2) + (5 - 3)] / 4
-= (9 + 0 + 15 + 2) / 4 = 26 / 4 = 6.5 msec
+= (9 + 0 + 15 + 2) / 4 = 26 / 4 = 6.5
+
