@@ -81,8 +81,8 @@ Tabel Proses :
 | P4      | 3               |
 
 Gantt chart :
-|  P₄  |   P₁   |   P₃   |   P₂   |
-0      3        9       16        24
+|  P₄  |   P₁   |   P₃   |   P₂   | 
+| 0   |   3    |   9    |   16        24 
 
 Average Turnaround Time (TAT) = 13.0
 Average waiting time = (3 + 16 + 9 + 0) / 4 = 7
