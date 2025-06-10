@@ -57,7 +57,8 @@ P5: 15 P6: 12
 •	Jumlah Context Switching:  Context switching terjadi setiap kali proses berpindah dari satu proses ke proses lain. Dalam Gantt Chart di atas, terdapat 6 context switches.
 2.	Round Robin
 •	Gantt Chart untuk Round Robin:
-| P1 | P2 | P3 | P1 | P4 | P5 | P6 | P1 | P5 | 0     4    8     9     11   12   15   19   20
+| P1 | P2 | P3 | P1 | P4 | P5 | P6 | P1 | P5 |
+0     4    8     9     11   12   15   19   20
 •	Completion Time (CT): P1: 19 P2: 8 P3: 9 P4: 11 P5: 20 P6: 15
 •	Average WT: (16 + 0 + 1 + 1 + 3 + 6) / 6 = 27 / 6 = 4.5
 •	Average TAT: (23 + 4 + 2 + 5 + 8 + 9) / 6 = 51 / 6 = 8.5
