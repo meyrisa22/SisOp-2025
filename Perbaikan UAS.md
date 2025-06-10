@@ -62,7 +62,13 @@ P5: 15 P6: 12
 •	Completion Time (CT): P1: 19 P2: 8 P3: 9 P4: 11 P5: 20 P6: 15
 •	Average WT: (16 + 0 + 1 + 1 + 3 + 6) / 6 = 27 / 6 = 4.5
 •	Average TAT: (23 + 4 + 2 + 5 + 8 + 9) / 6 = 51 / 6 = 8.5
-•	Process	AT	BT	CT	TAT	WT P1		0	7	23	23	16 P2		3	4	7	4	0 P3		6	1	8	2	1 P4		7	4	12	5	1 P5		9	5	17	8	3 P6		10	3	19	9	6
+•	Process	AT	BT	CT	TAT	WT
+         P1		0	7	23	23	16
+  	      P2  3	4	 7 	4	 0
+  	      P3		6	1 	8 	2	 1
+  	      P4		7	4 	12	5	 1
+  	      P5		9	5	 17	8	 3
+  	      P6		10	3	19	9	 6
 •	Context switching terjadi setiap kali proses berpindah dari satu proses ke proses lain. Dalam Gantt Chart di atas, terdapat 7 context switches.
 Berdasarkan perhitungan di atas:
 •	SJF Pre-emptive memiliki Average Waiting Time, Average Turnaround Time, dan Average Completion Time yang lebih rendah dibandingkan Round Robin (QT=4). Ini sesuai dengan sifat SJF yang cenderung optimal dalam meminimalkan waktu tunggu dan turnaround karena selalu memprioritaskan proses terpendek.
